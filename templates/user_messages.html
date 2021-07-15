@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+  <style>
+
+      table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even){background-color: #f2f2f2}
+
+    th {
+      background-color: #04AA6D;
+      color: white;
+    }
+
+    @font-face {
+      font-family: Roboto;
+      src: url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+    }
+    .ExternalClass {width: 100%;}
+    html {
+      font-size: 16px;
+    }
+    body {
+      background-color: #fbfbfb;
+      color: #333;
+      font-family: 'Roboto', Arial, sans-serif;
+    }
+    h1 {
+      margin: 0;
+      mso-line-height-rule: exactly;
+    }
+    p {
+      margin: 0;
+    }
+    a {
+      color: #03a652 !important;
+    }
+    div.container {
+      margin: auto;
+      margin-top: 4.75rem;
+      max-width: 488px;
+    }
+
+</style>
+
+<div class="container">
+  <h2>Users Message Data</h2>
+<table class="table">
+    <thead>
+        <tr>
+            {% for k in header %}
+            <th>{{k}}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for r in rows %}
+            <tr>
+                <td>{{r.username}}</td>
+                <td>{{r.message_count}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+    </div>
