@@ -5,7 +5,6 @@ import requests
 import json
 
 from django.shortcuts import render
-from django.views.generic import TemplateView
 from requests.exceptions import ConnectionError
 
 base_url = "http://www.mocky.io/v2/5d403d913300003a209d2ad3"
